@@ -1,0 +1,68 @@
+.navbar {
+  background-color: #000000 !important;
+  color: #0BECAA;;
+  a {
+  color: #0BECAA;;
+  padding: 0 10px;
+  }
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .navbar-brand {
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    font-size: 36px;
+    color: #0BECAA;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+    padding-left: 70px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      margin-left: 1rem;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+.brand-color {
+  text-shadow: -1px -1px 0 #0BECAA, 1px -1px 0 #0BECAA, -1px 1px 0 #0BECAA, 1px 1px 0 #0BECAA;
+  color: black;
+}
+
+
+  @media (max-width: 992px) {
+    .navbar-toggler {
+      display: block;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+
+      .nav-item {
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
