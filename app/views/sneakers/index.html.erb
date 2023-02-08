@@ -1,6 +1,5 @@
-<!-- app/views/sneakers/index.html.erb -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Sneaker Shop</a>
+  <a class="navbar-brand brand-color" href="#">Sneaker Shop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,18 +17,18 @@
     </ul>
   </div>
 </nav>
-
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Sneaker 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <% @sneakers.each do |sneaker| %>
+      <div class="col-md-4">
+        <div class="card">
+          <%= image_tag sneaker.image_url, class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= sneaker.name %></h5>
+            <p class="card-text"><%= sneaker.description %></p>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Add the rest of the cards -->
+    <% end %>
   </div>
 </div>

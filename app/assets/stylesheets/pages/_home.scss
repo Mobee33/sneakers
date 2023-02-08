@@ -1,0 +1,52 @@
+// Specific CSS for your home-page
+.container-fluid {
+  background-color: #000000;
+
+  .card {
+    height: 500px;
+    width: 350px;
+    margin: 10px;
+
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 20px;
+
+      h5 {
+        color: #0DEAAA;
+      }
+
+      p {
+        color: #FFFFFF;
+      }
+    }
+
+    &:hover {
+      background-color: #5BCABB;
+
+      .heart-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.heart-icon {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: #FFFFFF;
+}
