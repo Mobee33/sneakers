@@ -3,8 +3,8 @@
   background-color: #000000;
 
   .card {
-    height: 500px;
-    width: 375px;
+    height: 400px;
+    width: 300px;
     margin: 10px;
     border-radius: 4px;
     overflow: hidden;
@@ -81,4 +81,8 @@
 
 .body-home {
   background-color: #000000;
+}
+
+.no-width {
+  width: 26.05% !important;
 }
