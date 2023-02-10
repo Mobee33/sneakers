@@ -20,7 +20,7 @@ Sneaker.create([
     image_url: "https://assets.adidas.com/images/w_1880,f_auto,q_auto/654e72734a6a46209f6fac550091d8d6_9366/FY9123_06_standard.jpg"
   },
   { name: "Converse Chuck Taylor All Star",
-    description: "The Converse Chuck Taylor All Star is a classic basketball sneaker.",
+    description: "The Converse Chuck Taylor All Star is a classic basketball sneaker",
     price: 60,
     image_url: "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw577e5d95/images/c_08/M9160_C_08X1.jpg?sw=406"
   },
