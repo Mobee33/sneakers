@@ -1,69 +1,26 @@
-// Specific CSS for your home-page
-.container-fluid {
-  background-color: #000000;
+/* Navbar */
 
-  .card {
-    height: 400px;
-    width: 300px;
-    margin: 10px;
-    border-radius: 4px;
-    overflow: hidden;
-
-
-    .card-img-top {
-      height: 80%;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 10px;
-
-      h5 {
-        color: #0DEAAA;
-      }
-
-      p {
-        color: #FFFFFF;
-      }
-    }
-
-    &:hover {
-      background-color: #5BCABB;
-
-      .heart-icon {
-        display: block;
-      }
-    }
-  }
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 25px;
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.card-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 80%;
-  }
-
-.heart-icon {
-  display: none;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 30px;
-  color: #FFFFFF;
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
+.brand-color {
+  color: #343a40;
+}
+
+/* Header */
 
 .h1-header-home {
   margin-top: 50px;
@@ -72,17 +29,87 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #0BECAA;
+  color: #0BECAA; /* Updated color to green */
   text-shadow: 2px 2px #000000;
-  background-color: transparent;
   font-family: 'Big Shoulders Stencil Text', cursive;
   font-style: italic;
 }
 
-.body-home {
-  background-color: #000000;
+/* Cards */
+
+.card {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card:hover img,
+.card:hover .card-body {
+  background-color: rgba(11, 236, 170, 0.7);
+}
+
+.card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 5px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0BECAA;
+}
+
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
 }
 
 .no-width {
-  width: 26.05% !important;
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .no-width {
+    width: unset;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card-container .col-md-4 {
+    width: calc(100% / 2);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card-container .col-md-4 {
+    width: calc(100% / 3);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.body-home {
+  background-color: #000000;
 }
