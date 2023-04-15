@@ -28,6 +28,11 @@ Sneaker.create([
     description: "The New Balance 990 is a popular running sneaker.",
     price: 200,
     image_url: "https://i8.amplience.net/i/jpl/sz_137280_a?qlt=92"
+  },
+  { name: "Continental 80 adidas",
+    description: "The Continental 80 Adidas sneaker is a retro-style shoe with a sleek and simple design, featuring a split rubber sole and iconic side stripe.",
+    price: 200,
+    image_url: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   }
 ])
 
