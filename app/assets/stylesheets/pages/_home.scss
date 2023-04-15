@@ -28,7 +28,8 @@
 /* Header */
 
 .h1-header-home {
-  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 35px;
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
@@ -43,8 +44,8 @@
 /* Cards */
 
 .card {
-  // margin-bottom: 2rem;
-  border-radius: 6px;
+ padding-bottom: 10px;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -61,7 +62,7 @@
 }
 
 .card-img-top {
-  height: 250px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -73,6 +74,7 @@
 
 .card-title {
   margin-top: 0;
+
 }
 
 .card-text {
