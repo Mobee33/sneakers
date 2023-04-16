@@ -74,8 +74,10 @@
 
 .card-title {
   margin-top: 0;
-
+  color: #0DEAAA;
+  text-shadow: -0.3px -0.3px 0 #000, 0.3px -0.3px 0 #000, -0.3px 0.3px 0 #000, 0.3px 0.3px 0 #000;
 }
+
 
 .card-text {
   flex-grow: 1;

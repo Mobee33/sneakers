@@ -9,35 +9,35 @@ Sneaker.destroy_all
 puts "Purging the database"
 
 Sneaker.create([
-  { name: "Puma Smash V2",
-    description: "The Nike Air Jordan 1 is a classic basketball shoe worn by Michael Jordan in 1985, featuring bold colors and iconic design",
+  { name: "PUMA x BALMAIN Court Basketball",
+    description: "The PUMA x BALMAIN Court Basketball is a stylish and comfortable sneaker for both on and off the court.",
     price: 110,
-    image_url: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+    image_url: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/195683/01/sv01/fnd/PNA/fmt/png/PUMA-x-BALMAIN-Court-Basketball-Shoes"
   },
-  { name: "Nike Air Jordan 4",
-    description: "The Nike Air Jordan 4 is a classic basketball sneaker that features iconic design elements such as the plastic wing eyelets and Air cushioning.",
+  { name: "Nike Air Jordan 7 Retro",
+    description: "The Nike Air Jordan 7 Retro is a classic basketball sneaker featuring iconic design elements and superior cushioning technology.",
     price: 180,
-    image_url: "https://images.unsplash.com/photo-1606834330324-544ea3bf3015?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+    image_url: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f00e0c1d-9500-4063-843d-01f3f40ec1c7/air-jordan-7-retro-mens-shoes-098sXt.png"
   },
   { name: "Converse Chuck Taylor All Star",
     description: "The Converse Chuck Taylor All Star is a classic canvas basketball sneaker with a timeless design and cultural significance.",
     price: 60,
-    image_url: "https://images.unsplash.com/photo-1578269174279-27814d45033f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    image_url: "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw717da01b/images/g_08/M7650_G_08X1.jpg?sw=406"
   },
   { name: "New Balance 990",
     description: "The New Balance 990 is a popular running sneaker.",
     price: 200,
-    image_url: "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+    image_url: "https://nb.scene7.com/is/image/NB/w990nv5_nb_03_i?$pdpflexf2$&qlt=80&fmt=webp&wid=440&hei=440"
   },
-  { name: "Continental 80 adidas",
-    description: "The Continental 80 Adidas sneaker is a retro-style shoe with a sleek and simple design, featuring a split rubber sole and iconic side stripe.",
+  { name: "Adidas NMD_V3 SHOES",
+    description: "Adidas NMD_V3 SHOES combine modern style and innovative technology for a comfortable, lightweight fit. Ideal for urban explorers and sneaker enthusiasts.",
     price: 200,
-    image_url: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    image_url: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5255a7bb9a884e0f96e6af480005ee51_9366/NMD_V3_Shoes_Blue_HQ4447_06_standard.jpg"
   },
-  { name: "Continental 80 adidas",
-    description: "The Continental 80 Adidas sneaker is a retro-style shoe with a sleek and simple design, featuring a split rubber sole and iconic side stripe.",
+  { name: "Asics Court FF 2",
+    description: "The Asics Court FF 2 is a high-performance tennis shoe with FlyteFoam cushioning and an AHAR outsole for superior traction and durability.",
     price: 200,
-    image_url: "https://images.unsplash.com/photo-1579338908476-3a3a1d71a706?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+    image_url: "https://images.asics.com/is/image/asics/1042A076_103_SR_LT_GLB?$zoom$"
   }
 ])
 
