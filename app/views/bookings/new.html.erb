@@ -7,30 +7,48 @@
             <h1 class="booking-header">Book Now</h1>
           </div>
           <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div id="calendar"></div>
+            <%= form_with(model: @booking, local: true) do |form| %>
+              <div class="form-group">
+                <%= form.label :date, "Select Date:" %>
+                <%= form.date_field :date, required: true, class: "form-control" %>
               </div>
-              <div class="col-md-6">
-                <div class="booking-timezone">
-                  <label for="timezone-select">Select Timezone:</label>
-                  <%= select_tag "timezone-select", options_for_select(timezone_options) %>
-                  <p class="selected-date"></p>
-                  <% times = ['11:00', '12:00', '13:00', '14:00', '15:00', '16:00'] %>
-                  <div class="booking-times">
-                    <% times.each do |time| %>
-                      <div class="booking-time">
-                        <input type="radio" id="<%= time %>" name="booking-time" value="<%= time %>">
-                        <label for="<%= time %>"><%= time %></label>
-                      </div>
-                    <% end %>
-                  </div>
+              <div class="form-group">
+                <%= form.label :time, "Select Time:" %>
+                <%= form.time_field :time, min: "11:00", max: "16:00", step: 3600, required: true, class: "form-control" %>
+              </div>
+              <%= form.fields_for :client do |client_fields| %>
+                <div class="form-group">
+                  <%= client_fields.label :name %>
+                  <%= client_fields.text_field :name, required: true, class: "form-control" %>
                 </div>
+                <div class="form-group">
+                  <%= client_fields.label :email %>
+                  <%= client_fields.email_field :email, required: true, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= client_fields.label :phone %>
+                  <%= client_fields.telephone_field :phone, required: true, class: "form-control" %>
+                </div>
+              <% end %>
+              <div class="form-group">
+                <%= form.label :sneaker_make, "Sneaker Make:" %>
+                <%= form.text_field :sneaker_make, required: true, class: "form-control" %>
               </div>
-            </div>
-            <div class="booking-next">
-              <%= link_to "Next", "#" %>
-            </div>
+              <div class="form-group">
+                <%= form.label :special_requirements, "Special Requirements:" %>
+                <%= form.text_area :special_requirements, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= form.label :number_of_pairs, "Number of Pairs:" %>
+                <%= form.number_field :number_of_pairs, required: true, min: 1, class: "form-control" %>
+              </div>
+              <div class="form-group form-check">
+                <%= form.check_box :terms_accepted, required: true, class: "form-check-input" %>
+                <%= form.label :terms_accepted, "I agree with the terms and conditions", class: "form-check-label" %>
+                <%= link_to "Please read these terms carefully", terms_of_use_path, class: "terms-link" %>
+              </div>
+              <%= form.submit "Book Now", class: "btn btn-primary" %>
+            <% end %>
           </div>
         </div>
       </div>
