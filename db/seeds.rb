@@ -9,35 +9,41 @@ Sneaker.destroy_all
 puts "Purging the database"
 
 Sneaker.create([
-  { name: "PUMA x BALMAIN Court Basketball",
-    description: "The PUMA x BALMAIN Court Basketball is a stylish and comfortable sneaker for both on and off the court.",
+  { name: "Sneaker Revival",
+    description: "Bring your sneakers back to life with our professional cleaning service. Transform your dirty sneakers into fresh, clean kicks",
     price: 110,
-    image_url: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/195683/01/sv01/fnd/PNA/fmt/png/PUMA-x-BALMAIN-Court-Basketball-Shoes"
+    image_url: "shoea2.jpeg",
+    before_image_url: "shoea1.jpeg"
   },
-  { name: "Nike Air Jordan 7 Retro",
-    description: "The Nike Air Jordan 7 Retro is a classic basketball sneaker featuring iconic design elements and superior cushioning technology.",
+  { name: "Pristine White Transformation",
+    description: "Upgrade your sneakers with our expert cleaning service. We'll turn your muddy, worn sneakers into spotless white kicks",
     price: 180,
-    image_url: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f00e0c1d-9500-4063-843d-01f3f40ec1c7/air-jordan-7-retro-mens-shoes-098sXt.png"
+    image_url: "shoeb2.jpeg",
+    before_image_url: "shoeb1.jpeg"
   },
-  { name: "Converse Chuck Taylor All Star",
-    description: "The Converse Chuck Taylor All Star is a classic canvas basketball sneaker with a timeless design and cultural significance.",
+  { name: "Soiled Sneakers? No Problem!",
+    description: "Restore your sneakers to their former glory with our expert cleaning service. Our professionals will clean your muddy, storm-worn sneakers to perfection, leaving them looking fresh and stylish once again.",
     price: 60,
-    image_url: "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw717da01b/images/g_08/M7650_G_08X1.jpg?sw=406"
+    image_url: "shoed2.jpeg",
+    before_image_url: "shoed1.jpeg"
   },
-  { name: "New Balance 990",
-    description: "The New Balance 990 is a popular running sneaker.",
+  { name: "Sneaker Emergency! We've Got Your Back",
+    description: "Don't let dirty sneakers bring you down. Our expert cleaning service will transform your white and blue kicks into fresh, stylish must-haves.",
     price: 200,
-    image_url: "https://nb.scene7.com/is/image/NB/w990nv5_nb_03_i?$pdpflexf2$&qlt=80&fmt=webp&wid=440&hei=440"
+    image_url: "shoee2.jpeg",
+    before_image_url: "shoee1.jpeg"
   },
-  { name: "Adidas NMD_V3 SHOES",
-    description: "Adidas NMD_V3 SHOES combine modern style and innovative technology for a comfortable, lightweight fit. Ideal for urban explorers and sneaker enthusiasts.",
+  { name: "Sole Searching: The Case of the Gray and Red Sneakers",
+    description: "Are your gray and red sneakers in need of a serious makeover? Our expert cleaning service will transform your kicks into fresh, stylish head-turners.",
     price: 200,
-    image_url: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5255a7bb9a884e0f96e6af480005ee51_9366/NMD_V3_Shoes_Blue_HQ4447_06_standard.jpg"
+    image_url: "shoef2.jpeg",
+    before_image_url: "shoef1.jpeg"
   },
-  { name: "Asics Court FF 2",
-    description: "The Asics Court FF 2 is a high-performance tennis shoe with FlyteFoam cushioning and an AHAR outsole for superior traction and durability.",
+  { name: "Sneak in Style: The White and Red Converse Comeback",
+    description: "Are your white and red Converse sneakers ready for a comeback? Our expert cleaning service will transform your kicks into fresh, stylish must-haves that will have everyone talking.",
     price: 200,
-    image_url: "https://images.asics.com/is/image/asics/1042A076_103_SR_LT_GLB?$zoom$"
+    image_url: "shoeg2.png",
+    before_image_url: "shoeg1.png"
   }
 ])
 

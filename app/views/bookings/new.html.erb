@@ -1,0 +1,39 @@
+<div class="booking-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="booking-header">Book Now</h1>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div id="calendar"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="booking-timezone">
+                  <label for="timezone-select">Select Timezone:</label>
+                  <%= select_tag "timezone-select", options_for_select(timezone_options) %>
+                  <p class="selected-date"></p>
+                  <% times = ['11:00', '12:00', '13:00', '14:00', '15:00', '16:00'] %>
+                  <div class="booking-times">
+                    <% times.each do |time| %>
+                      <div class="booking-time">
+                        <input type="radio" id="<%= time %>" name="booking-time" value="<%= time %>">
+                        <label for="<%= time %>"><%= time %></label>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="booking-next">
+              <%= link_to "Next", "#" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
