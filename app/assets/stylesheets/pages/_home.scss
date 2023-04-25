@@ -74,7 +74,13 @@
 
 .card-title {
   margin-top: 0;
+  font-weight: bold;
+  color: #0BECAA; /* Match the theme color */
+  transition: color 0.2s ease-in-out; /* Add transition for color change */
+}
 
+.card:hover .card-title {
+  color: #343a40; /* Change color on hover to make it visible */
 }
 
 .card-text {
@@ -116,4 +122,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sneaker-card {
+  position: relative;
+}
+
+.sneaker-images {
+  position: relative;
+}
+
+.dirty-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sneaker-card:hover .dirty-image {
+  opacity: 1;
 }
