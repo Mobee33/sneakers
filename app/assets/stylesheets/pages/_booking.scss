@@ -1,97 +1,51 @@
 .booking-page {
-  background-color: #000;
-  color: #05CE9A;
-  display: flex;
-  height: 100vh;
-}
-
-.card {
-  background-color: #1c1c1c;
-  border-color: #0BECAA;
-}
-
-.card-header {
-  background-color: #1c1c1c;
-  border-bottom-color: #0BECAA;
+  background-color: #f8f9fa;
+  padding: 50px;
 }
 
 .booking-header {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.booking-timezone label {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.booking-timezone select {
-  width: 100%;
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.selected-date {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.booking-times {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.booking-time {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-}
-
-.booking-time input[type="radio"] {
-  display: none;
-}
-
-.booking-time label {
-  display: block;
-  background-color: #05CE9A;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 35px;
   text-align: center;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.booking-time label:hover {
-  background-color: #0BECAA;
-}
-
-.booking-next {
-  width: 100%;
-  margin-top: 40px;
-  text-align: right;
-}
-
-.booking-next a {
-  display: inline-block;
-  background-color: #0BECAA;
-  color:#000;
-  padding: 20px;
-  font-size: 18px;
+  font-size: 3rem;
   font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0BECAA;
+  text-shadow: 2px 2px #000000;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  font-style: italic;
 }
 
-.booking-next a:hover {
-  background-color: #05CE9A;
+.booking-page .card {
+  margin-bottom: 50px;
+}
+
+.booking-page .form-group label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.booking-page .form-control {
+  border-radius: 0;
+}
+
+.booking-page .form-check-input {
+  margin-right: 10px;
+}
+
+.booking-page .terms-link {
+  margin-left: 10px;
+}
+
+.booking-page .btn-primary {
+  background-color: #0BECAA;
+  border-color: #0BECAA;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.booking-page .btn-primary:hover {
+  background-color: #17d9af;
+  border-color: #17d9af;
 }
