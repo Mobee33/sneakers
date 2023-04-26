@@ -1,57 +1,70 @@
-<div class="booking-page">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">
+<body class="body-booking">
+  <div class="booking-page">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+          <div class="booking-form">
             <h1 class="booking-header">Book Now</h1>
-          </div>
-          <div class="card-body">
             <%= form_with(model: @booking, local: true) do |form| %>
-              <div class="form-group">
-                <%= form.label :date, "Select Date:" %>
-                <%= form.date_field :date, required: true, class: "form-control" %>
-              </div>
-              <div class="form-group">
-                <%= form.label :time, "Select Time:" %>
-                <%= form.time_field :time, min: "11:00", max: "16:00", step: 3600, required: true, class: "form-control" %>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <%= form.label :date, "Select Date:" %>
+                  <%= form.date_field :date, required: true, class: "form-control" %>
+                </div>
+                <div class="form-group col-md-6">
+                  <%= form.label :time, "Select Time:" %>
+                  <%= form.time_field :time, min: "11:00", max: "16:00", step: 3600, required: true, class: "form-control" %>
+                </div>
               </div>
               <%= form.fields_for :client do |client_fields| %>
-                <div class="form-group">
-                  <%= client_fields.label :name %>
-                  <%= client_fields.text_field :name, required: true, class: "form-control" %>
-                </div>
-                <div class="form-group">
-                  <%= client_fields.label :email %>
-                  <%= client_fields.email_field :email, required: true, class: "form-control" %>
+                <h3 class="booking-subheader">Client Information</h3>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <%= client_fields.label :name %>
+                    <%= client_fields.text_field :name, required: true, class: "form-control" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= client_fields.label :email %>
+                    <%= client_fields.email_field :email, required: true, class: "form-control" %>
+                  </div>
                 </div>
                 <div class="form-group">
                   <%= client_fields.label :phone %>
                   <%= client_fields.telephone_field :phone, required: true, class: "form-control" %>
                 </div>
               <% end %>
-              <div class="form-group">
-                <%= form.label :sneaker_make, "Sneaker Make:" %>
-                <%= form.text_field :sneaker_make, required: true, class: "form-control" %>
+              <h3 class="booking-subheader">Sneaker Information</h3>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <%= form.label :sneaker_make, "Sneaker Make:" %>
+                  <%= form.text_field :sneaker_make, required: true, class: "form-control" %>
+                </div>
+                <div class="form-group col-md-6">
+                  <%= form.label :number_of_pairs, "Number of Pairs:" %>
+                  <%= form.number_field :number_of_pairs, required: true, min: 1, class: "form-control" %>
+                </div>
               </div>
               <div class="form-group">
                 <%= form.label :special_requirements, "Special Requirements:" %>
                 <%= form.text_area :special_requirements, class: "form-control" %>
               </div>
-              <div class="form-group">
-                <%= form.label :number_of_pairs, "Number of Pairs:" %>
-                <%= form.number_field :number_of_pairs, required: true, min: 1, class: "form-control" %>
-              </div>
               <div class="form-group form-check">
-                <%= form.check_box :terms_accepted, required: true, class: "form-check-input" %>
+                <%= form.check_box :terms_accepted, required: true, class: "form-check-input", id: "terms-checkbox" %>
                 <%= form.label :terms_accepted, "I agree with the terms and conditions", class: "form-check-label" %>
                 <%= link_to "Please read these terms carefully", terms_of_use_path, class: "terms-link" %>
               </div>
-              <%= form.submit "Book Now", class: "btn btn-primary" %>
+              <div class="form-group">
+                <%= form.submit "Book Now", class: "btn btn-primary", id: "submit-button", disabled: true %>
+              </div>
             <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <script>
+    document.getElementById("terms-checkbox").addEventListener("change", function() {
+      document.getElementById("submit-button").disabled = !this.checked;
+    });
+  </script>
+</body>
