@@ -10,15 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_25_221147) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_10_154808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone"
-    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "date"
@@ -27,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_221147) do
     t.text "special_requirements"
     t.integer "number_of_pairs"
     t.boolean "terms_accepted"
+    t.bigint "client_id", null: false
+    t.index ["client_id"], name: "index_bookings_on_client_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -48,4 +46,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_221147) do
     t.string "before_image_url"
   end
 
+  add_foreign_key "bookings", "clients"
 end
