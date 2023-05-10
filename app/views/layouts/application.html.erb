@@ -19,5 +19,11 @@
 
   <body>
     <%= yield %>
+    <script>
+      <% if session[:booking_success_message] %>
+        alert("<%= j session[:booking_success_message] %>");
+        <% session.delete(:booking_success_message) %>
+      <% end %>
+    </script>
   </body>
 </html>
