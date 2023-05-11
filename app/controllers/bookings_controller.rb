@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     if @booking.save
-      session[:booking_success_message] = "Thank you for your booking! We will be in touch soon."
+      session[:booking_success_message] = "Thank you for your booking! We shall be in touch soon."
       redirect_to root_path
     else
       render :new
